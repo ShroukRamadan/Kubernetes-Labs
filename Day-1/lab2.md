@@ -48,6 +48,7 @@ k apply -f ./busybox.yaml
 ```
 k get pod 
 ```
+![2](https://user-images.githubusercontent.com/57557314/212434183-593254ca-f369-463d-846f-128664b080e1.png)
 
 there are 4 pods (replicas: 4 in ymal file) 
 
