@@ -40,6 +40,8 @@ k apply -f ./busybox.yaml
 
 ```
 
+![l2-1](https://user-images.githubusercontent.com/57557314/212433359-ea5d3772-3ee5-4e5d-b282-96ddc0f8ce8a.png)
+
 
 2. How many PODs are DESIRED in the new-replica-set?
 
@@ -52,14 +54,13 @@ there are 4 pods (replicas: 4 in ymal file)
 
 3. What is the image used to create the pods in the new-replica-set?
 
-there is two way 
+there is three ways 
  - frist from yaml file (mage: busybox777)
  - second (k discribe pods podName )
 
-
 4. How many PODs are READY in the new-replica-set?
 
-there are for pods
+there are 4 pods
 
 5. Why do you think the PODs are not ready?
 
@@ -72,6 +73,7 @@ Answer: as there no image with name busybox777
 ```bash
 k delete pod podName
 ```
+![l2-6](https://user-images.githubusercontent.com/57557314/212433760-20b164a7-488d-4b3d-a135-f853ff35aba9.png)
 
 
 
@@ -110,6 +112,6 @@ as there is ReplicaSet (replicaset ensures that a specified number of pod replic
             image: nginx
 
 ```bash
-toush replica.yaml 
+toush nginx.yaml 
 k apply -f ./replica.yaml
 ```
