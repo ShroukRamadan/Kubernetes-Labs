@@ -36,6 +36,10 @@ OR
 ```
 kubectl apply -f service.yml 
 ```
+
+![p1](https://user-images.githubusercontent.com/57557314/213478124-629648b8-f463-46b0-b6e4-e8b5ade17add.png)
+
+
 ---------------------------------------------
 
 
@@ -94,6 +98,7 @@ kubectl delete pods <pods-names> -n lab3
 ```
 kubectl logs <pod-name> -n lab3 
 ```
+-----------------------------------------------------------
 
+![kk](https://user-images.githubusercontent.com/57557314/213480356-88837e6e-5344-4601-b80c-b0504550f0ad.png)
 
-kubectl delete pods deployment-nginx-5c58bd979d-2lz25 deployment-nginx-5c58bd979d-6qvtn deployment-nginx-5c58bd979d-zmsnk -n lab3
