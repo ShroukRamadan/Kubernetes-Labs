@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: deployment-nginx
+  name: deployment-nginx
+  namespace: lab3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deployment-nginx
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: deployment-nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
+          
+      
+status: {}

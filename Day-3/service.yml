@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: deployment-nginx
+  name: deployment-nginx
+  namespace: lab3
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: deployment-nginx
+  type: NodePort
+status:
+  loadBalancer: {}

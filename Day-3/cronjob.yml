@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: endpoint-lister
+  namespace: lab3
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: cronjob-sa
+          containers:
+          - name: cron-container
+            image: bitnami/kubectl
+            imagePullPolicy: IfNotPresent
+            command: ["kubectl","get","endpoints"] 
+          restartPolicy: OnFailure
